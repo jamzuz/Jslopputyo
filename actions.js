@@ -5,6 +5,7 @@ let input = "" // tyhjä muuttuja johon talletetaan inputti käyttäjältä
 let onkojo = false;
 let jessenakyy = false;
 let listanakyy = false;
+let vaihto = true
 // kuunnellaan klikkauksia nappulasta ja talletaan inputti muuttujaan
 document.getElementById("button").addEventListener("click", function(){
     console.log("Button has been clicked")
@@ -102,10 +103,20 @@ let functions = ["google","listaa","jesse","10","soita","tee popup","vaihda","fu
       //popup.onclick = () => popup.remove(); <-- mielestäni tämä tekee enemmän järkeä mutta alempi on tehtävän annon mukainen(kai)
       popup.onclick = () => document.getElementById("ilmestynyt").remove();
     };
-    //vaihda
-    if (input.toLowerCase() == "vaihda"){
+    //vaihda bodya edes takaisin
+    if (input.toLowerCase() == "vaihda" && vaihto == true ){
+     // console.log(vaihto) testaysta
       document.body.style.backgroundColor = "red"; // simppeli
+      vaihto = false
+    }
+    else
+    {
+      document.body.style.backgroundColor = "lightgray";
+      vaihto = true
     };
+       
+      
+
     //functio inside functio yo
     if (input.toLowerCase() == "funktio" && onkojo == false ){
 
