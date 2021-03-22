@@ -144,7 +144,7 @@ let functions = ["google","listaa","jesse","10","soita","tee popup","vaihda","fu
       })
     };
     //komento ei tunnistetta
-    if (functions.includes(input.toLowerCase()) || isNaN(input) == false && input < 1000){ 
+    if (functions.includes(input.toLowerCase()) || isNaN(input) == false && input < 1000 && input > 0 ){ 
       // katsotaan onko käyttäjän input functio listassa
     }
     else{ // jos ei ole niin tulostetaan että komentoa ei tunnistettu
